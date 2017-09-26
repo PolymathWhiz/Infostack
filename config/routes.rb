@@ -1,18 +1,18 @@
 Rails.application.routes.draw do
-  get 'users/show'
-
-  resources :comments
-  resources :posts
-  devise_for :users
-  get 'pages/home'
-
+  root to: 'pages#home'
+  
   get 'pages/about'
-
   get 'pages/feedback'
-
   get 'pages/privacy'
-
   get 'pages/terms'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  devise_for :users
+  
+  devise_scope :users do
+    resources :users, only: [:show]    
+  end
+  
+  resources :posts do
+    resources :comments
+  end
 end
