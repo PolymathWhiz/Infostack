@@ -14,6 +14,12 @@ gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
 # Use Devise for authentication
 gem 'devise'
+# Kaminari for pagination
+gem 'kaminari'
+# Faker for fake users
+gem 'faker', '1.6.6'
+# Friendly_id for cool urls
+gem 'friendly_id'
 
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 5.0'
