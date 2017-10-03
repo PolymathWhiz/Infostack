@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Forum</title>
+    <title>
+      <%= full_title(yield :title) %>
+    </title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://use.fontawesome.com/b66158db77.js"></script>
   </head>
 
   <body>
+  <% unless controller_name == "sessions" ||
+									controller_name == "registrations" &&
+									controller.action_name == "new" ||
+									controller_name == "registrations" &&
+									controller.action_name == "create" ||
+									controller_name == "passwords" %>
+
+    <%= render 'shared/nav' %>
+
+  <% else %>
+    <style>
+      body {
+        background-color: #292254;
+      }
+    </style>
+  <% end %>
+      
     <%= yield %>
+
+    <% unless controller_name == "sessions" ||
+									controller_name == "registrations" &&
+									controller.action_name == "new" ||
+									controller_name == "registrations" &&
+									controller.action_name == "create" ||
+									controller_name == "passwords" %>
+
+    <%= render 'shared/footer' %>
+
+    <% end %>
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>

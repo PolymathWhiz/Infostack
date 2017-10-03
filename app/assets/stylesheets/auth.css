@@ -1,0 +1,16 @@
+.wrapper {
+    background-color: red;
+}
+
+.img_auth {
+    max-width: 120px;
+    margin: 12px;
+}
+
+.btn-rounded {
+    border-radius: 10em !important;
+}
+
+.blue-gradient {
+    background: -webkit-linear-gradient(50deg, #45cafc, #303f9f);
+}

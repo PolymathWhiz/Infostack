@@ -20,6 +20,8 @@ gem 'kaminari'
 gem 'faker', '1.6.6'
 # Friendly_id for cool urls
 gem 'friendly_id'
+# Rails-Jquery for Jquery
+gem 'jquery-rails'
 
 # Use SCSS for stylesheets
 # gem 'sass-rails', '~> 5.0'
