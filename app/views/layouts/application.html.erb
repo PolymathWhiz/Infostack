@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>
       <%= full_title(yield :title) %>
     </title>
     <%= csrf_meta_tags %>
+
+    <%= favicon_link_tag 'logo.png' %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <script src="https://use.fontawesome.com/b66158db77.js"></script>
@@ -21,13 +23,15 @@
     <%= render 'shared/nav' %>
 
   <% else %>
+
     <style>
       body {
         background-color: #292254;
       }
     </style>
+
   <% end %>
-      
+
     <%= yield %>
 
     <% unless controller_name == "sessions" ||

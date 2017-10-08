@@ -20,14 +20,26 @@
             <a class="nav-link text-white" href="#">Contact</a>
         </li>
         </ul>
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <%= link_to 'Login', root_path, class: 'nav-link text-white' %>
-            </li>
-            <li class="nav-item">
-                <%= link_to 'Sign up', root_path, class: 'nav-link text-white' %>
-            </li>
-        </ul>
+        <% if user_signed_in? %>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <%= link_to 'Dish', new_user_session_path, class: 'nav-link text-white' %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to 'Dash', new_user_registration_path, class: 'nav-link text-white' %>
+                </li>
+            </ul>
+
+        <% else %>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <%= link_to 'Login', new_user_session_path, class: 'nav-link text-white' %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to 'Sign up', new_user_registration_path, class: 'nav-link text-white' %>
+                </li>
+            </ul>
+        <% end %>
     </div>
  </div>
 </nav>

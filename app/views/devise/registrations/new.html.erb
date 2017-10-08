@@ -11,6 +11,11 @@
             <%= render 'shared/error_message', object: f.object %>
 
             <div class="form-group">
+              <%= f.label :full_name %>
+              <%= f.text_field :full_name, class: 'form-control', autocomplete: 'off' %>
+            </div>
+
+            <div class="form-group">
               <%= f.label :username %>
               <%= f.text_field :username, class: 'form-control', autocomplete: 'off' %>
             </div>
@@ -26,10 +31,10 @@
             </div>
 
             <div class="form-group">
-              <%= f.label :password_confirmation %> 
+              <%= f.label :password_confirmation %>
               <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
             </div>
-              
+
             <%= f.submit "Sign up", class: 'btn btn-primary btn-block' %>
           <% end %>
           <div class="m-t-20">
