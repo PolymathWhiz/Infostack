@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <%= favicon_link_tag 'logo.png' %>
   <title> <%= @user.username %> - Infostack </title>
-  <meta name="description" content="The only forum you will ever need" />
+  <meta name="description" content="Giving the world a voice" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <%= stylesheet_link_tag    'profile/application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= favicon_link_tag 'logo.png' %>
-
+  <script src="https://use.fontawesome.com/b66158db77.js"></script>
 </head>
 <body>
 <div class="app">
@@ -19,16 +19,14 @@
     <div class="left">
       <div class="box bg-white">
         <div class="navbar md-whiteframe-z1 no-radius infostack">
-            <!-- brand -->
             <a class="navbar-brand">
               <%= image_tag 'logo_lng.png', alt: 'infostack', class: 'logo_' %>
             </a>
-            <!-- / brand -->
         </div>
         <div class="box-row">
           <div class="box-cell scrollable hover">
             <div class="box-inner">
-              <div class="p hidden-folded blue-50" style="background-image:url(images/wallx.png); background-size:cover">
+              <div class="p hidden-folded blue-50 bg_profile">
                 <div class="rounded w-64 bg-white inline pos-rlt">
                   <%= image_tag 'pm.svg', alt: '...', class: 'img-responsive rounded' %>
                 </div>
@@ -107,7 +105,9 @@
             <li>
               <a href="http://themeforest.net/item/materil-responsive-admin-dashboard-template/11062969" target="_blank" md-ink-ripple>
                 <i class="icon mdi-action-help i-20"></i>
-                <span>Help &amp; Feedback</span>
+                <span>
+                  &copy; 2017, Infostack.
+                </span>
               </a>
             </li>
           </ul>
@@ -192,6 +192,8 @@
       <div class="p">
         <p>About</p>
         <p>Lorem ipsum dolor sit amet, consecteter adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet. </p>
+
+        <!-- IM links -->
         <div class="m-v text-center">
           <a class="text-muted">
             <i class="fa ui-icon fa-facebook"></i>
